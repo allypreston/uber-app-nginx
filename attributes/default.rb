@@ -1,1 +1,1 @@
-default['nginx']['proxy_port'] = 7000
+default['nginx']['proxy_port'] = 3000
