@@ -15,5 +15,11 @@ describe 'nginx::default' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
+    it 'should install nginx' do
+      expect(chef_run).to install_package 'nginx'
+    end
+    it 'should enable the nginx service' do
+      expect(chef_run).to enable_service 'nginx'
+    end
   end
 end
